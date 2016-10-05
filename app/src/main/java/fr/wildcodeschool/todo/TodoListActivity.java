@@ -72,7 +72,7 @@ public class TodoListActivity extends Activity {
                                 ArrayAdapter<String> arrayAdapter) {
         // si au moins un caractère a été rentré dans l'editText
         if (editText.getText().toString().length() > 0) {
-            arrayList.add(0, editText.getText().toString());
+            arrayList.add(1, editText.getText().toString());
             arrayAdapter.notifyDataSetChanged();
             editText.setText("");
         } else {
