@@ -1,0 +1,9 @@
+# Todo list
+
+## Exercice de programmmation Android
+
+1. Cloner et ouvrir le projet avec Android Studio
+2. Réparer les erreurs de compilation
+3. Lancer l'appli et faire afficher le toast "1 caractère minimum !!"
+4. Faire en sorte que "Nouvelle tâche" s'enlève quand on commence à écrire
+5. Ajouter la fonctionnalité de suppression d'une tache quand on clique dessus
