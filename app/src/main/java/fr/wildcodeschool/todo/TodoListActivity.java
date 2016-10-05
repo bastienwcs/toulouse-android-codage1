@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class TodoListActivity extends Activity {
+
+    private ArrayList<String> listTodo;
+    private ArrayAdapter<String> adaptTodo;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +28,9 @@ public class TodoListActivity extends Activity {
         // On recupère l'editText de sa version XML
         final EditText textTodo = (EditText) findViewById(R.id.textToDo);
 
-        // On crée une liste de chaine de caractère
-        final ArrayList<String> listTodo = new ArrayList<String>();
-
-        // On crée un adaptateur de liste
-        final ArrayAdapter<String> adaptTodo;
+        // On crée une liste de chaine de caractère et on y ajoute un premier élément
+        listTodo = new ArrayList<String>();
+        listTodo.add("Elément 1");
 
         // On lie l'adaptateur avec la liste de chaine de caractere et un layout
         adaptTodo = new ArrayAdapter<String>(this,
@@ -68,8 +70,8 @@ public class TodoListActivity extends Activity {
     }
 
     // Fonction qui rempli une liste
-    public void rempliListeTodo(ArrayList<String> arrayList, EditText editText,
-                                ArrayAdapter<String> arrayAdapter) {
+    private void rempliListeTodo(ArrayList<String> arrayList, EditText editText,
+                                 ArrayAdapter<String> arrayAdapter) {
         // si au moins un caractère a été rentré dans l'editText
         if (editText.getText().toString().length() > 0) {
             arrayList.add(1, editText.getText().toString());
