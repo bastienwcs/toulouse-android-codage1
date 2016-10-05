@@ -48,7 +48,7 @@ public class TodoListActivity extends Activity {
                     // si le bouton OK ou la trackball a été appuyer
                     if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
                         // appel de la fonction d'ajout dans la liste
-                        rempliListeTodo(listTodo, textTodo, adaptTodo);
+                        TodoListActivity.this.rempliListeTodo(listTodo, textTodo, adaptTodo);
                         return true;
                     }
                 }
@@ -64,7 +64,7 @@ public class TodoListActivity extends Activity {
         button.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // appel de la fonction d'ajout dans la liste
-                rempliListeTodo(listTodo, textTodo, adaptTodo);
+                TodoListActivity.this.rempliListeTodo(listTodo, textTodo, adaptTodo);
             }
         });
     }
