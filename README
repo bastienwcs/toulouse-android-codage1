@@ -11,4 +11,4 @@ La liste suivante doit être réalisée dans l'ordre. Il est inutile de se press
 3. Lancer l'appli et faire afficher le toast "1 caractère minimum !!" (Sans modifier le code source)
 4. Faire en sorte que "Nouvelle tâche" s'enlève quand on commence à écrire (placeholder)
 5. Un bug fait que les nouvelles taches ne sont pas affichées en tête de liste. Répare-le (utilise le debuggeur)
-6. Ajouter la fonctionnalité de suppression d'une tache quand on clique dessus
+6. Ajouter la fonctionnalité de suppression d'une tâche quand on clique dessus
