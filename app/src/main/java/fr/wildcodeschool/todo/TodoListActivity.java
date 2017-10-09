@@ -30,7 +30,7 @@ public class TodoListActivity extends Activity {
 
         // On crée une liste de chaine de caractère et on y ajoute un premier élément
         listTodo = new ArrayList<String>();
-        listTodo.add("Elément 1");
+        listTodo.add("tacos");
 
         // On lie l'adaptateur avec la liste de chaine de caractere et un layout
         adaptTodo = new ArrayAdapter<String>(this,
