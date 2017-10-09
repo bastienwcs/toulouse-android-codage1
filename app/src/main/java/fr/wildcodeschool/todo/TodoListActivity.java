@@ -24,7 +24,7 @@ public class TodoListActivity extends Activity {
         setContentView(R.layout.main);
 
         // On recupère la listView de sa version XML
-        ListView listViewTodo = (ListView) findViewById(R.id.listToDo);
+        final ListView listViewTodo = (ListView) findViewById(R.id.listToDo);
         // On recupère l'editText de sa version XML
         final EditText textTodo = (EditText) findViewById(R.id.textToDo);
 
@@ -38,6 +38,14 @@ public class TodoListActivity extends Activity {
 
         // On associe l'adaptateur à la listeView
         listViewTodo.setAdapter(adaptTodo);
+
+        listViewTodo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                listTodo.remove(i);
+                adaptTodo.notifyDataSetChanged();
+            }
+        });
 
         // Ecouteur si on appuie soit sur le bouton OK ou la trackball en étant
         // sur l'editText
@@ -74,7 +82,7 @@ public class TodoListActivity extends Activity {
                                  ArrayAdapter<String> arrayAdapter) {
         // si au moins un caractère a été rentré dans l'editText
         if (editText.getText().toString().length() > 0) {
-            arrayList.add(1, editText.getText().toString());
+            arrayList.add(0, editText.getText().toString());
             arrayAdapter.notifyDataSetChanged();
             editText.setText("");
         } else {
